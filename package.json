@@ -1,0 +1,10 @@
+{ "author": "Brandon Mansfield",
+  "Description": "Technical challenge for VU proyect.", 
+  "scripts": {
+    "test": "cypress run"
+  },
+  "dependencies": {
+    "node": "^21.6.1",
+    "cypress": "^8.5.0"  
+  }
+}
