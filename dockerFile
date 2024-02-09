@@ -1,0 +1,19 @@
+# imagen base de Node.js
+FROM node:14
+
+# directorio de trabajo en /app
+WORKDIR /app
+
+# Copia el archivo package.json y package-lock.json
+COPY package*.json ./
+
+# Instala las dependencias del proyecto
+RUN npm install cypress
+RUN npm install node
+
+
+# Copia el resto de los archivos del proyecto
+COPY . .
+
+# Ejecuta los comandos necesarios al iniciar el contenedor
+CMD ["npm", "test"]
